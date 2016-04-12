@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>
+            <title>Assignment 4</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+            <script type="text/javascript" src="js/weather.js" ></script>   
+        </header>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="panel" id="left-panel">
+                <div data-role="main" class="ui-content">
+                    <form name="myForm" action="index.html">
+                    <label for="myWeather">City Name</label>
+                    <input type="text" name="cityName" id="cityName" placeholder="Enter Your City Name" required>
+                    <input type="button" id="button" value="check weather" data-icon="check" data-iconpos="right" data-inline="true" data-rel="close" onclick=" return validate();">
+                    </form>
+                </div>
+            </div>
+			 <div data-role="panel" id="right-panel" data-position="right">
+                      <div id="g-information">
+							   <h4>The location of your device is:</h4>
+								latitude: <span id="latitude" class="g-info"></span> and longitude: <span id="longitude" class="g-info"></span>
+					  </div>
+            </div>
+            <div data-role="header" data-position="fixed"> 
+                <h2>Weather App</h2>
+            </div>
+            <div data-role="content" class="content">
+			<a href="#left-panel" data-icon="bars" data-role="button" data-inline="true">Enter City Name</a><a href="#right-panel" data-icon="info" data-role="button" data-inline="true" id="button-get-position">Get Device Location</a> 
+                <h1 id="current_temp" class="icon"></h1>
+                <p id="current_summary"></p>
+                <p id="location"></p>
+				<h4>The latitude and longitude below are from google's API</h4>
+                <text>Latitude: </text><text id="myLatitude"></text><text> Longitude: </text><text id="myLongitude"></text><p></p>
+				<h3><center>Weather Summary for Next 5 days</center></h3>
+                <table data-role="table" class="ui-responsive ui-shadow" id="myTable" align="center">
+                  <thead>
+                    <tr>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="Day_1"></td>
+                    </tr>
+                    <tr>
+                      <td id="Day_2"></td>
+                    </tr>
+                    <tr>
+                      <td id="Day_3"></td>
+                    </tr>
+                    <tr>
+                      <td id="Day_4"></td>
+                    </tr>
+                     <tr>
+                      <td id="Day_5"></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div data-role="footer">
+            <h3>&#169; Harsh Khurana</h3>
+            </div>
+        </div>
+		<script type="text/javascript" src="js/geolocation.js"></script>
+    </body>
+</html>
