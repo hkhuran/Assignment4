@@ -32,13 +32,14 @@
                 latitude: <span id="latitude" class="g-info"></span> and longitude: <span id="longitude" class="g-info"></span>
             </div>
         </div>
-		<!-- html page header-->
+		<!-- html page header with navigation bar-->
         <div data-role="header" data-position="fixed"> 
-            <h2>Weather App</h2>
+            <h2>Weather App</h2><br/>
+			<center><a href="#left-panel" data-icon="bars" data-role="button" data-inline="true">Temperature</a>
+			<a href="#right-panel" data-icon="info" data-role="button" data-inline="true" id="button-get-position">Device's Location</a></center>
         </div>
         <div data-role="content" class="content">
-			<!-- Buttons to take input from user-->
-            <a href="#left-panel" data-icon="bars" data-role="button" data-inline="true">Enter City Name</a><a href="#right-panel" data-icon="info" data-role="button" data-inline="true" id="button-get-position">Get Device Location</a> 
+			<!-- Buttons to take input from user --> 
             <!-- h1, p and text tags to display values from weather.js-->
 			<h1 id="current_temp" class="icon"></h1>
             <p id="current_summary"></p>
